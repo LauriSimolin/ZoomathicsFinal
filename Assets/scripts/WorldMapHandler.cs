@@ -44,7 +44,7 @@ public class WorldMapHandler : MonoBehaviour {
     {
 
         // Loading scene 1 which is fruit picking game
-        SceneManager.LoadScene(1);                                 //<------ Here you can change which scene is loaded when level is loaded
+        SceneManager.LoadScene(3);                                 //<------ Here you can change which scene is loaded when level is loaded
         
         // current level is set
         currentLevel = level;

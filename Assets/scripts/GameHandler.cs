@@ -34,6 +34,7 @@ public class GameHandler : MonoBehaviour {
 	void Start () {
         spawner = FindObjectOfType<FruitSpawner>().gameObject;
         //worldHandler = FindObjectOfType<WorldMapHandler>().gameObject;
+       
 
         LoadProblem();
 	}
@@ -58,7 +59,8 @@ public class GameHandler : MonoBehaviour {
                 
 
              // after finnishing level we load worldmap again
-             SceneManager.LoadScene(0);                                  //< ---here you want to add loading of the next scene
+             
+             SceneManager.LoadScene(2);                                  //< ---here you want to add loading of the next scene
         }
 
         // if right answer is submitted                              
@@ -176,6 +178,6 @@ public class GameHandler : MonoBehaviour {
 
     public void LoadMapView()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }
