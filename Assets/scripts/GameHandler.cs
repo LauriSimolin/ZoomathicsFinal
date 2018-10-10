@@ -16,7 +16,7 @@ public class GameHandler : MonoBehaviour {
     public int scoreToPass;
 
     private bool submitted;
-    private bool levelcomplete;
+    public static bool levelcomplete;
     
 
     // initializing delay time, how much is waited after submitting answer before going to next scene
@@ -34,8 +34,8 @@ public class GameHandler : MonoBehaviour {
 	void Start () {
         spawner = FindObjectOfType<FruitSpawner>().gameObject;
         //worldHandler = FindObjectOfType<WorldMapHandler>().gameObject;
-       
 
+        levelcomplete = false;
         LoadProblem();
 	}
 	
@@ -180,4 +180,6 @@ public class GameHandler : MonoBehaviour {
     {
         SceneManager.LoadScene(2);
     }
+
+
 }

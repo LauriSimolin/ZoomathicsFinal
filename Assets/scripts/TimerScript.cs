@@ -7,31 +7,54 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour {
 
     Image timerBar;
-    public float maxTime = 5f;
+    public float maxTime = 45f;
     float timeLeft;
+
+    float timer = 2f;
+    float currentTime;
+
+    public Text problemtext;
+    
    
 
 	void Start () {
         
         timerBar = GetComponent<Image>();
         timeLeft = maxTime;
+
+        currentTime = timer;
 	}
 	
 	
 	void Update () {
+        
+
 		if(timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
         }
-        else
+        else if(GameHandler.levelcomplete == false)
         {
-            SceneManager.LoadScene("Scene1");
+
+            TimeOut();
+            currentTime -= Time.deltaTime;
+            if(currentTime <= 0)
+            {
+                
+                SceneManager.LoadScene(3);
+            }
+            
             
         }
 	}
     public void StartGame()
     {
         SceneManager.LoadScene("Time-Loading");
+    }
+
+    public void TimeOut()
+    {
+        problemtext.text = "Time run out, try again.";
     }
 }
