@@ -7,11 +7,16 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour {
 
     Image timerBar;
-    public float maxTime = 45f;
+    public float maxTime;
     float timeLeft;
 
-    float timer = 1f;
+    float timer;
     float currentTime;
+
+    
+
+    public GameObject timerbarprefab;
+    
 
     public Text problemtext;
     
@@ -19,9 +24,16 @@ public class TimerScript : MonoBehaviour {
 
 	void Start () {
         
-        timerBar = GetComponent<Image>();
-        timeLeft = maxTime;
+        GameObject newTimerBar = Instantiate(timerbarprefab, timerbarprefab.transform.position, Quaternion.identity) as GameObject;
+        newTimerBar.transform.SetParent(GameObject.FindGameObjectWithTag("timerbar").transform, false);
 
+
+        maxTime = 50f;
+        timerBar = newTimerBar.GetComponent<Image>();
+        
+        
+        timeLeft = maxTime;
+        timer = 1f;
         currentTime = timer;
 	}
 	
@@ -39,19 +51,19 @@ public class TimerScript : MonoBehaviour {
 
             TimeOut();
             currentTime -= Time.deltaTime;
-            if(currentTime <= 0)
+            if (currentTime <= 0)
             {
-                
+
                 SceneManager.LoadScene(3);
             }
-            
-            
+
+
         }
 	}
-    public void StartGame()
-    {
-        SceneManager.LoadScene("Time-Loading");
-    }
+    //public void StartGame()
+    //{
+    //    SceneManager.LoadScene("Time-Loading");
+    //}
 
     public void TimeOut()
     {
