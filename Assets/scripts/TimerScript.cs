@@ -10,7 +10,7 @@ public class TimerScript : MonoBehaviour {
     public float maxTime = 45f;
     float timeLeft;
 
-    float timer = 2f;
+    float timer = 1f;
     float currentTime;
 
     public Text problemtext;

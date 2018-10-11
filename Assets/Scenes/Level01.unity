@@ -1002,6 +1002,11 @@ Prefab:
       propertyPath: maxTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114148269696185294, guid: a8ed2bb8c0c40e743ab593282eba5f18,
+        type: 2}
+      propertyPath: submitbutton
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ed2bb8c0c40e743ab593282eba5f18, type: 2}
   m_IsPrefabAsset: 0
