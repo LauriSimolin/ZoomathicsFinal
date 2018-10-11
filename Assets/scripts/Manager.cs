@@ -19,4 +19,5 @@ public class Manager : MonoBehaviour {
     {
         SceneManager.LoadScene(1);
     }
+    
 }
