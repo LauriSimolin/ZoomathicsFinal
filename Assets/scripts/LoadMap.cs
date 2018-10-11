@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Manager : MonoBehaviour {
+public class LoadMap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,10 +14,8 @@ public class Manager : MonoBehaviour {
 	void Update () {
 		
 	}
-
-    void MainMenu()
+    public void LoadGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
-    
 }
