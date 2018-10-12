@@ -32,7 +32,7 @@ public class LoginScript : MonoBehaviour {
         if (Username != "")
         {
             print("Login Success");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
 
     }

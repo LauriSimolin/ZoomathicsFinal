@@ -15,9 +15,21 @@ public class Manager : MonoBehaviour {
 		
 	}
 
-    void MainMenu()
+    void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    void Login()
     {
         SceneManager.LoadScene(1);
     }
+
+    void MapView()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+
     
 }

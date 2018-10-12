@@ -156,6 +156,7 @@ public class GameHandler : MonoBehaviour {
             problemtext.text = "CORRECT!";
             levelcomplete = true;
             score += 1;
+            //ShowAnimationCorrect();
 
 
         }
