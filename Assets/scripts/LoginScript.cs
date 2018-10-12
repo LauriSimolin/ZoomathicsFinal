@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -16,7 +16,7 @@ public class LoginScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Screen.orientation = ScreenOrientation.Portrait;
+       // Screen.orientation = ScreenOrientation.Portrait;
 	}
 	
 	// Update is called once per frame
@@ -24,10 +24,10 @@ public class LoginScript : MonoBehaviour {
         //set data to String from input fields
         Username = username.GetComponent<InputField>().text;
 
-        btnlogin = login.GetComponent<Button>();
-        btnlogin.onClick.AddListener(validateLogin);
+        //btnlogin = login.GetComponent<Button>();
+        //btnlogin.onClick.AddListener(validateLogin);
     }
-    private void validateLogin()
+    public void validateLogin()
     {
         if (Username != "")
         {

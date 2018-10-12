@@ -15,17 +15,17 @@ public class Manager : MonoBehaviour {
 		
 	}
 
-    void Menu()
+    public void Menu()
     {
         SceneManager.LoadScene(0);
     }
 
-    void Login()
+    public void Login()
     {
         SceneManager.LoadScene(1);
     }
 
-    void MapView()
+    public void MapView()
     {
         SceneManager.LoadScene(2);
     }
