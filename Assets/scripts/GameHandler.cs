@@ -180,6 +180,7 @@ public class GameHandler : MonoBehaviour {
     public void LoadMapView()
     {
         SceneManager.LoadScene(2);
+        
     }
 
 

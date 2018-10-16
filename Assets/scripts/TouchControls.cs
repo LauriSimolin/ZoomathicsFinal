@@ -51,12 +51,14 @@ public class TouchControls : MonoBehaviour {
                     {
                         Debug.Log("selected level 1");
                         GetComponent<WorldMapHandler>().LoadLevel(1);
-                        
+
                     }
+                    
                     if (hit.transform.gameObject.tag == "Level2")
                     {
                         Debug.Log("selected level 2");
                         GetComponent<WorldMapHandler>().LoadLevel(2);
+                        
                     }
                     if (hit.transform.gameObject.tag == "Level3")
                     {
